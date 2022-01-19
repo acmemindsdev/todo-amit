@@ -13,13 +13,12 @@ import {MatSliderModule} from '@angular/material/slider'
 import {MatAutocompleteModule} from '@angular/material/autocomplete'
 import { MatDialogModule } from "@angular/material/dialog";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TasksComponent } from './pages/tasks/tasks.component';
-
+// import {MatFormFieldModule} from '@material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TasksComponent
+
   ],
   imports: [
     BrowserModule,
@@ -34,15 +33,9 @@ import { TasksComponent } from './pages/tasks/tasks.component';
     MatAutocompleteModule,
     MatDialogModule,
     NgbModule,
-    // MatDialogRef,
-
 
 
   ],
-  exports:[
-
-  ],
-
   providers: [],
   bootstrap: [AppComponent]
 })
