@@ -1,0 +1,48 @@
+mat-grid-tile {
+  background: lightblue;
+}
+.header{
+  background-color:rgb(255, 255, 255);
+  height: 50px;
+  width: 100%;
+}
+
+.titleHeader{
+   font-size:20px;
+   font-weight: 700;
+   color: #3b77d9;
+   height: 50px;
+   margin: 8px;
+   padding: 10px;
+}
+
+.todoHeader{
+ background-color: #3b77d9 ;
+}
+
+.plusIcon{
+  border: 0;
+  background-color:  rgba(255, 255, 255, 0.301);
+  color: #3b77d9;
+  border-width : 0;
+  font-size: medium;
+
+}
+.addTaskSection{
+  background-color: rgba(192, 188, 188, 0.301);
+ padding: 10px;
+ color: #3b77d9;
+ font-size:smaller;
+}
+.sideMargin{
+  margin: 10px;
+}
+// for star
+// .checked {
+//   color: orange;
+//   // text-align: right;
+// }
+.dotBtn{
+  border: 0;
+  background-color:rgb(255, 255, 255);
+}
