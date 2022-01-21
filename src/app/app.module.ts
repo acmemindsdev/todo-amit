@@ -14,6 +14,11 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete'
 import { MatDialogModule } from "@angular/material/dialog";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import {MatFormFieldModule} from '@material/form-field';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -33,8 +38,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatAutocompleteModule,
     MatDialogModule,
     NgbModule,
+    MatGridListModule,
+    MatCardModule,
+    FormsModule,
+    MatDividerModule,
+    MatListModule
 
-
+  ],
+  exports:[
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
