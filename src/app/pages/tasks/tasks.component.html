@@ -23,7 +23,7 @@
       <section class="example-section">
         <span class="example-list-section">
           <ul *ngFor="let item of completeList">
-            <mat-checkbox [color]="checkBoxColor" class="example-margin">
+            <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="revertToTaskList(item)">
               {{ item.name }}
             </mat-checkbox>
             <mat-divider></mat-divider>
