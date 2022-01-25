@@ -49,3 +49,7 @@ mat-grid-tile {
 .todo-top-side{
   padding: 30px;
 }
+
+.mat-grid-list .mat-expansion-panel:not([class*=mat-elevation-z]) {
+   box-shadow: none;
+}

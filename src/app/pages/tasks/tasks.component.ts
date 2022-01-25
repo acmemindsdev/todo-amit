@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {TaskListComponent} from './task-list/task-list.component';
+import { TaskType } from './TaskType ';
 
 @Component({
   selector: 'app-tasks',
@@ -7,10 +7,9 @@ import {TaskListComponent} from './task-list/task-list.component';
   styleUrls: ['./tasks.component.scss']
 })
 export class TasksComponent implements OnInit {
-  taskName: { id:number, name:string, completed:boolean }[] = [];
-  checkBoxColor = 'primary';
-  completeList: { id:number, name:string, completed:boolean }[] = [];
-  checkBoxFlag:boolean = true;
+  taskName: TaskType[] = [];
+  completeList: TaskType[] = [];
+  panelOpenState:boolean =  true;
 
   constructor() { }
 
@@ -25,29 +24,28 @@ export class TasksComponent implements OnInit {
     })
   }
 
-  completeTask(item: { id:number, name:string, completed:boolean }) {
-    console.log(item);
+  completeTask(item: TaskType) {
     this.removeFromTaskList(item);
     this.addToCompleteTaskList(item);
   }
 
-  removeFromTaskList(selectedIndex: { id:number, name:string, completed:boolean }) {
+  removeFromTaskList(selectedIndex: TaskType) {
     this.taskName = this.taskName.filter(item => item.id !== selectedIndex.id);
   }
 
-  addToCompleteTaskList(selectedIndex: { id:number, name:string, completed:boolean }) {
+  addToCompleteTaskList(selectedIndex: TaskType) {
     this.completeList.push(selectedIndex);
   }
 
-  addInTaskLIst(item: { id:number, name:string, completed:boolean }) {
+  addInTaskLIst(item: TaskType) {
     this.taskName.push(item);
   }
 
-  removeFromCompleteList(item: { id:number, name:string, completed:boolean }) {
+  removeFromCompleteList(item: TaskType) {
     this.completeList = this.completeList.filter(data => data.id !== item.id);
   }
 
-  revertToTaskList(item: { id:number, name:string, completed:boolean }) {
+  revertToTaskList(item: TaskType) {
     this.addInTaskLIst(item);
     this.removeFromCompleteList(item);
   }

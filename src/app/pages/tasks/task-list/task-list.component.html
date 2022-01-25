@@ -1,19 +1,8 @@
 <section class="example-section">
   <span class="example-list-section">
-    <ul *ngFor="let listOfTask of taskName">
-        <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="showDataOnList(listOfTask)" >
-        {{ listOfTask.name }}
-      </mat-checkbox>
-      <mat-divider></mat-divider>
-    </ul>
-  </span>
-</section>
-
-<section class="example-section">
-  <span class="example-list-section">
-    <ul *ngFor="let completedList of completeList">
-        <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="showCompleteData(completedList)" [(ngModel)]="checkBoxFlag" style="text-decoration: line-through;" >
-        {{ completedList.name }}
+    <ul *ngFor="let letData of listData">
+        <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="showDataOnList(letData)" >
+        {{ letData.name }}
       </mat-checkbox>
       <mat-divider></mat-divider>
     </ul>
