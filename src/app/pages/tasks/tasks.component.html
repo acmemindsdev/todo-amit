@@ -6,30 +6,12 @@
     <div class="addTaskSection">
       <button class="plusIcon">+</button> Add a task
     </div>
-    <section class="example-section">
-      <span class="example-list-section">
-        <ul *ngFor="let item of taskName">
-          <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="completeTask(item)" >
-            {{ item.name }}
-          </mat-checkbox>
-          <mat-divider></mat-divider>
-        </ul>
-      </span>
-    </section>
+    <app-task-list [taskName]="taskName" (completeTask)="completeTask($event)" ></app-task-list>
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title> Completed </mat-panel-title>
       </mat-expansion-panel-header>
-      <section class="example-section">
-        <span class="example-list-section">
-          <ul *ngFor="let item of completeList">
-            <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="revertToTaskList(item)">
-              {{ item.name }}
-            </mat-checkbox>
-            <mat-divider></mat-divider>
-          </ul>
-        </span>
-      </section>
+      <app-task-list [completeList]="completeList" (revertToTaskList)="revertToTaskList($event)" ></app-task-list>
     </mat-expansion-panel>
   </mat-grid-list>
 </div>

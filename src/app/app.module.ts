@@ -22,11 +22,13 @@ import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {TasksComponent} from './pages/tasks/tasks.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { TaskListComponent } from './pages/tasks/task-list/task-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TasksComponent
+    TasksComponent,
+    TaskListComponent,
 
   ],
   imports: [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TaskListComponent} from './task-list/task-list.component';
 
 @Component({
   selector: 'app-tasks',
@@ -9,6 +10,7 @@ export class TasksComponent implements OnInit {
   taskName: { id:number, name:string, completed:boolean }[] = [];
   checkBoxColor = 'primary';
   completeList: { id:number, name:string, completed:boolean }[] = [];
+  checkBoxFlag:boolean = true;
 
   constructor() { }
 
@@ -24,6 +26,7 @@ export class TasksComponent implements OnInit {
   }
 
   completeTask(item: { id:number, name:string, completed:boolean }) {
+    console.log(item);
     this.removeFromTaskList(item);
     this.addToCompleteTaskList(item);
   }
