@@ -13,13 +13,21 @@ import {MatSliderModule} from '@angular/material/slider'
 import {MatAutocompleteModule} from '@angular/material/autocomplete'
 import { MatDialogModule } from "@angular/material/dialog";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TasksComponent } from './pages/tasks/tasks.component';
-
+// import {MatFormFieldModule} from '@material/form-field';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {TasksComponent} from './pages/tasks/tasks.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent
+
   ],
   imports: [
     BrowserModule,
@@ -34,15 +42,17 @@ import { TasksComponent } from './pages/tasks/tasks.component';
     MatAutocompleteModule,
     MatDialogModule,
     NgbModule,
-    // MatDialogRef,
-
-
-
+    MatGridListModule,
+    MatCardModule,
+    FormsModule,
+    MatDividerModule,
+    MatListModule,
+    MatExpansionModule,
+    MatCheckboxModule,
   ],
   exports:[
-
+    MatGridListModule
   ],
-
   providers: [],
   bootstrap: [AppComponent]
 })
