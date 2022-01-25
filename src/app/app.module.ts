@@ -21,6 +21,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {TasksComponent} from './pages/tasks/tasks.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import {TasksComponent} from './pages/tasks/tasks.component';
     MatDividerModule,
     MatListModule,
     MatExpansionModule,
-
+    MatCheckboxModule,
   ],
   exports:[
     MatGridListModule

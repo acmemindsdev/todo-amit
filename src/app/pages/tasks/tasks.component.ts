@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks.component.scss']
 })
 export class TasksComponent implements OnInit {
+  taskName: { id:number, name:string, completed:boolean }[] = [];
+  checkBoxColor = 'primary';
+  completeList:{id:number, name:string, completed:boolean}[] = [];
 
   constructor() { }
 
@@ -15,41 +18,22 @@ export class TasksComponent implements OnInit {
       'call someone','buy something','meet someone','study something'
     ];
 
-    this.items = sampleData.map((data, index) => {
+    this.taskName = sampleData.map((data, index) => {
       return {id:index, name:data, completed:false}
     })
-
   }
 
-  items:{id:number,name:string,completed: boolean}[] =[];
+  completeTask(item: { id:number, name:string, completed:boolean }) {
+    this.removeFromTaskList(item);
+    this.addToCompleteTaskList(item);
+  }
 
+  removeFromTaskList(selectedIndex:{id:number, name:string, completed:boolean}) {
+    this.taskName = this.taskName.filter(item => item.id !== selectedIndex.id);
+  }
 
+  addToCompleteTaskList(selectedIndex:{id:number, name:string, completed:boolean}) {
+    this.completeList.push(selectedIndex);
+  }
 
-  toDoList:any[] = [];
-
-  //add task
-    addTask(item:string){
-
-        console.warn(item);
-        this.toDoList.push({id:this.toDoList.length, name:item});
-        console.warn(this.toDoList);
-    }
-  // remove
-    removeTask(id:number){
-
-      console.warn(id);
-      this.toDoList = this.toDoList.filter(item =>  {
-        return item.id !== id
-      });
-    }
-
-  //important List
-    importantList:any;
-    addTofavoritList(id:number){
-      this.importantList = this.toDoList.filter(data => {
-        return data.id == id;
-
-      });
-
-    }
 }

@@ -1,34 +1,41 @@
-<div class="sideMargin" >
-  <mat-grid-list cols="1" rowHeight="45px" gutterSize="1px" >
-
+<div class="sideMargin">
+  <mat-grid-list cols="1" rowHeight="45px" gutterSize="1px">
     <div class="header">
-      <div class="titleHeader">Tasks <button class="dotBtn" >...</button></div>
+      <div class="titleHeader">Tasks <button class="dotBtn">...</button></div>
     </div>
 
-    <div class="addTaskSection" >
-      <button class="plusIcon" > + </button>  Add a task
+    <div class="addTaskSection">
+      <button class="plusIcon">+</button> Add a task
     </div>
 
-      <input type="radio" id="html" name="fav_language" />  
-      <label for="html" >Buy Something</label><br />
-      <mat-divider></mat-divider>
+    <section class="example-section">
+      <span class="example-list-section">
+        <ul *ngFor="let item of taskName">
+          <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="completeTask(item)" >
+            {{ item.name }}
+          </mat-checkbox>
+          <mat-divider></mat-divider>
+        </ul>
+      </span>
+    </section>
 
-      <input type="radio" id="html2" name="fav_language" />  
-      <label for="html2" >Study Something</label><br />
-      <mat-divider></mat-divider>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Completed </mat-panel-title>
+      </mat-expansion-panel-header>
 
-      <input type="radio" id="html3" name="fav_language" />  
-      <label for="html3" >Meeting Someone</label><br />
-      <mat-divider></mat-divider>
 
-      <mat-expansion-panel hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Completed
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>First Task</p>
-      </mat-expansion-panel>
+      <section class="example-section">
+        <span class="example-list-section">
+          <ul *ngFor="let item of completeList">
+            <mat-checkbox [color]="checkBoxColor" class="example-margin">
+              {{ item.name }}
+            </mat-checkbox>
+            <mat-divider></mat-divider>
+          </ul>
+        </span>
+      </section>
 
+    </mat-expansion-panel>
   </mat-grid-list>
-  </div>
+</div>
