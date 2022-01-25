@@ -37,7 +37,6 @@ export class TasksComponent implements OnInit {
   }
 
   addInTaskLIst(item: { id:number, name:string, completed:boolean}) {
-    this.completeList = this.completeList.filter(data => data.id !== item.id);
     this.taskName.push(item);
   }
 
