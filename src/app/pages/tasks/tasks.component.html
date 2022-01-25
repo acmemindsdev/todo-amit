@@ -3,11 +3,9 @@
     <div class="header">
       <div class="titleHeader">Tasks <button class="dotBtn">...</button></div>
     </div>
-
     <div class="addTaskSection">
       <button class="plusIcon">+</button> Add a task
     </div>
-
     <section class="example-section">
       <span class="example-list-section">
         <ul *ngFor="let item of taskName">
@@ -18,24 +16,20 @@
         </ul>
       </span>
     </section>
-
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title> Completed </mat-panel-title>
       </mat-expansion-panel-header>
-
-
       <section class="example-section">
         <span class="example-list-section">
           <ul *ngFor="let item of completeList">
-            <mat-checkbox [color]="checkBoxColor" class="example-margin">
+            <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="revertToTaskList(item)">
               {{ item.name }}
             </mat-checkbox>
             <mat-divider></mat-divider>
           </ul>
         </span>
       </section>
-
     </mat-expansion-panel>
   </mat-grid-list>
 </div>
