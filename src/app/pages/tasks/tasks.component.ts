@@ -36,16 +36,4 @@ export class TasksComponent implements OnInit {
     this.completeList.push(selectedIndex);
   }
 
-  addInTaskLIst(item: { id:number, name:string, completed:boolean }) {
-    this.taskName.push(item);
-  }
-
-  removeFromCompleteList(item: { id:number, name:string, completed:boolean }) {
-    this.completeList = this.completeList.filter(data => data.id !== item.id);
-  }
-
-  revertToTaskList(item: { id:number, name:string, completed:boolean }) {
-    this.addInTaskLIst(item);
-    this.removeFromCompleteList(item);
-  }
 }
