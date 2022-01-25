@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TasksComponent implements OnInit {
   taskName: { id:number, name:string, completed:boolean }[] = [];
   checkBoxColor = 'primary';
-  completeList:{id:number, name:string, completed:boolean}[] = [];
+  completeList: { id:number, name:string, completed:boolean }[] = [];
 
   constructor() { }
 
