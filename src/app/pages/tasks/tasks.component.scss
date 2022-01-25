@@ -6,7 +6,6 @@ mat-grid-tile {
   height: 50px;
   width: 100%;
 }
-
 .titleHeader{
    font-size:20px;
    font-weight: 700;
@@ -15,18 +14,15 @@ mat-grid-tile {
    margin: 8px;
    padding: 10px;
 }
-
 .todoHeader{
  background-color:#0078D7 ;
 }
-
 .plusIcon{
   border: 0;
   background-color:  rgba(255, 255, 255, 0.301);
   color: #0078D7;
   border-width : 0;
   font-size: medium;
-
 }
 .addTaskSection{
   background-color: rgba(192, 188, 188, 0.301);
@@ -37,17 +33,10 @@ mat-grid-tile {
 .sideMargin{
   margin: 10px;
 }
-// for star
-// .checked {
-//   color: orange;
-//   // text-align: right;
-// }
 .dotBtn{
   border: 0;
   background-color:rgb(255, 255, 255);
 }
-
-// ###################################################
 .top-background{
   background-color: #0078D7;
 }
@@ -57,17 +46,6 @@ mat-grid-tile {
   color: aliceblue;
   font-size: 25px;
 }
-
-// .divide-in-part{
-//  flex-grow: 1;
-//  flex-shrink: 1;
-//  flex-basis: 0px;
-//  justify-content: flex-start;
-//  align-items: center;
-//  width: calc(100% - 96px);
-// }
-//---------------------------------------
 .todo-top-side{
-  // margin: 20px;
   padding: 30px;
 }

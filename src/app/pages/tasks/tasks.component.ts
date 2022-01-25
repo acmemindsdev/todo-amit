@@ -19,7 +19,7 @@ export class TasksComponent implements OnInit {
     ];
 
     this.taskName = sampleData.map((data, index) => {
-      return {id:index, name:data, completed:false}
+      return { id:index, name:data, completed:false }
     })
   }
 
@@ -28,11 +28,11 @@ export class TasksComponent implements OnInit {
     this.addToCompleteTaskList(item);
   }
 
-  removeFromTaskList(selectedIndex:{id:number, name:string, completed:boolean}) {
+  removeFromTaskList(selectedIndex: { id:number, name:string, completed:boolean }) {
     this.taskName = this.taskName.filter(item => item.id !== selectedIndex.id);
   }
 
-  addToCompleteTaskList(selectedIndex:{id:number, name:string, completed:boolean}) {
+  addToCompleteTaskList(selectedIndex: { id:number, name:string, completed:boolean }) {
     this.completeList.push(selectedIndex);
   }
 
