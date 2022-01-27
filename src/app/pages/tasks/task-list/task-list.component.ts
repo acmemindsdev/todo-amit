@@ -1,5 +1,6 @@
 import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
 import {TaskType} from '../TaskType ';
+import {ThemePalette} from "@angular/material/core";
 
 @Component({
   selector: 'app-task-list',
@@ -7,20 +8,11 @@ import {TaskType} from '../TaskType ';
   styleUrls: ['./task-list.component.scss']
 })
 export class TaskListComponent implements OnInit {
-  private _listData: { id:number, name:string, completed:boolean }[] = [];
-  @Input() set listData(value: TaskType[]) {
-    this._listData = value;
-    this.updateFilterData();
-    console.log('inside Seter')
-  }
-  get listData() {
-    return this._listData;
-  }
+  @Input() listData: TaskType[] = [];
   @Input() listType: any;
   @Output() checkBoxToggle:EventEmitter<any>= new EventEmitter();
-  checkBoxColor = 'primary';
+  checkBoxColor: ThemePalette = 'primary';
   filteredData: TaskType[] = [];
-  checkBoxFlag: any;
   checked:boolean = true;
 
 
@@ -32,19 +24,13 @@ export class TaskListComponent implements OnInit {
 
   updateFilterData(){
     if (this.listType == 'completed') {
-      this.filteredData = this._listData.filter(data => data.completed === true);
+      this.filteredData = this.listData.filter(data => data.completed);
     } else if (this.listType == 'pending') {
-      this.filteredData = this._listData.filter(data => data.completed === false);
+      this.filteredData = this.listData.filter(data => !data.completed);
     }
-    console.log(this._listData);
   }
 
   showDataOnList(data: { id:number, name:string, completed:boolean }) {
     this.checkBoxToggle.emit(data);
   }
-
-  // showCompleteData(data2: {id:number, name:string, completed:boolean }) {
-  //   this.checkBoxToggle.emit(data2);
-
-  // }
 }

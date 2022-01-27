@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { TaskType } from './TaskType ';
+import {TaskListComponent} from "./task-list/task-list.component";
 
 @Component({
   selector: 'app-tasks',
@@ -7,6 +8,8 @@ import { TaskType } from './TaskType ';
   styleUrls: ['./tasks.component.scss'],
 })
 export class TasksComponent implements OnInit {
+  @ViewChild('pendingList', { static: false }) pendingList!: TaskListComponent;
+  @ViewChild('completeList', { static: false }) completeList!: TaskListComponent;
   taskName: TaskType[] = [];
   // completeList: TaskType[] = [];
   panelOpenState: boolean = true;
@@ -28,12 +31,15 @@ export class TasksComponent implements OnInit {
     console.log(this.taskName);
   }
 
-  pendingTasks(item: TaskType) {
-    item.completed = true;
-    console.log(item);
-  }
+  updateTasks(item: TaskType, type: string) { // pending list
+    item.completed = type === 'pending';
+    // if (type === 'pending') {
+    //   item.completed = true;
+    // } else {
+    //   item.completed = false;
+    // }
 
-  completedTask(item: TaskType) {
-    item.completed = false;
+    this.completeList.updateFilterData();
+    this.pendingList.updateFilterData();
   }
 }
