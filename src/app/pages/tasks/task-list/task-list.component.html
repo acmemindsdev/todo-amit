@@ -1,7 +1,7 @@
 <section class="example-section">
   <span class="example-list-section">
-    <ul *ngFor="let letData of listData">
-        <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="showDataOnList(letData)" >
+    <ul *ngFor="let letData of filteredData">
+        <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="showDataOnList(letData)">
         {{ letData.name }}
       </mat-checkbox>
       <mat-divider></mat-divider>

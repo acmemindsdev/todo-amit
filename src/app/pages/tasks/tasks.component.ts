@@ -4,49 +4,36 @@ import { TaskType } from './TaskType ';
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
-  styleUrls: ['./tasks.component.scss']
+  styleUrls: ['./tasks.component.scss'],
 })
 export class TasksComponent implements OnInit {
   taskName: TaskType[] = [];
-  completeList: TaskType[] = [];
-  panelOpenState:boolean =  true;
+  // completeList: TaskType[] = [];
+  panelOpenState: boolean = true;
+  completedData: any;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-
     let sampleData = [
-      'call someone','buy something','meet someone','study something'
+      'call someone',
+      'buy something',
+      'meet someone',
+      'study something',
     ];
 
     this.taskName = sampleData.map((data, index) => {
-      return { id:index, name:data, completed:false }
-    })
+      return { id: index, name: data, completed: false };
+    });
+    console.log(this.taskName);
   }
 
-  completeTask(item: TaskType) {
-    this.removeFromTaskList(item);
-    this.addToCompleteTaskList(item);
+  pendingTasks(item: TaskType) {
+    item.completed = true;
+    console.log(item);
   }
 
-  removeFromTaskList(selectedIndex: TaskType) {
-    this.taskName = this.taskName.filter(item => item.id !== selectedIndex.id);
-  }
-
-  addToCompleteTaskList(selectedIndex: TaskType) {
-    this.completeList.push(selectedIndex);
-  }
-
-  addInTaskLIst(item: TaskType) {
-    this.taskName.push(item);
-  }
-
-  removeFromCompleteList(item: TaskType) {
-    this.completeList = this.completeList.filter(data => data.id !== item.id);
-  }
-
-  revertToTaskList(item: TaskType) {
-    this.addInTaskLIst(item);
-    this.removeFromCompleteList(item);
+  completedTask(item: TaskType) {
+    item.completed = false;
   }
 }
