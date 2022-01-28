@@ -1,5 +1,5 @@
-export interface dataType{
-  name:string,
-  id:number,
-  completed:boolean,
+export interface TaskType {
+  name: string,
+  id: number,
+  completed: boolean,
 }

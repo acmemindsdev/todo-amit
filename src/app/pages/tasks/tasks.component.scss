@@ -46,6 +46,18 @@ mat-grid-tile {
   color: aliceblue;
   font-size: 25px;
 }
-.todo-top-side{
-  padding: 30px;
+.mat-grid-list .mat-expansion-panel:not([class*=mat-elevation-z]) {
+   box-shadow: none;
+}
+
+.bg-light .bg-variant {
+  background-color: #0078D7;
+}
+.set-search-position{
+  margin: 10px;
+  padding: 190px;
+}
+.todo-icon-heding-style{
+  margin: 5px;
+  padding: 20px;
 }
