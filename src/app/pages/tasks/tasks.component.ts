@@ -11,9 +11,9 @@ export class TasksComponent implements OnInit {
   @ViewChild('pendingList', { static: false }) pendingList!: TaskListComponent;
   @ViewChild('completeList', { static: false }) completeList!: TaskListComponent;
   taskName: TaskType[] = [];
-  // completeList: TaskType[] = [];
   panelOpenState: boolean = true;
   completedData: any;
+  checkBoxFlag: boolean = true;
 
   constructor() {}
 
@@ -31,14 +31,8 @@ export class TasksComponent implements OnInit {
     console.log(this.taskName);
   }
 
-  updateTasks(item: TaskType, type: string) { // pending list
+  updateTasks(item: TaskType, type: string) {
     item.completed = type === 'pending';
-    // if (type === 'pending') {
-    //   item.completed = true;
-    // } else {
-    //   item.completed = false;
-    // }
-
     this.completeList.updateFilterData();
     this.pendingList.updateFilterData();
   }

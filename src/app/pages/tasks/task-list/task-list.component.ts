@@ -13,7 +13,7 @@ export class TaskListComponent implements OnInit {
   @Output() checkBoxToggle:EventEmitter<any>= new EventEmitter();
   checkBoxColor: ThemePalette = 'primary';
   filteredData: TaskType[] = [];
-  checked:boolean = true;
+  checkBoxFlag:boolean = false;
 
 
   constructor() { }
@@ -22,9 +22,10 @@ export class TaskListComponent implements OnInit {
     this.updateFilterData();
   }
 
-  updateFilterData(){
+  updateFilterData() {
     if (this.listType == 'completed') {
       this.filteredData = this.listData.filter(data => data.completed);
+      this.checkBoxFlag = true;
     } else if (this.listType == 'pending') {
       this.filteredData = this.listData.filter(data => !data.completed);
     }

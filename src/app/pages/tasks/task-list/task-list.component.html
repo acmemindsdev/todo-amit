@@ -1,10 +1,17 @@
-<section class="example-section">
-  <span class="example-list-section">
-    <ul *ngFor="let letData of filteredData">
-        <mat-checkbox [color]="checkBoxColor" class="example-margin" (click)="showDataOnList(letData)">
-        {{ letData.name }}
-      </mat-checkbox>
-      <mat-divider></mat-divider>
-    </ul>
-  </span>
-</section>
+<div>
+  <section class="example-section">
+    <span class="example-list-section">
+      <ul *ngFor="let letData of filteredData">
+        <mat-checkbox
+          [color]="checkBoxColor"
+          class="example-margin"
+          (click)="showDataOnList(letData)"
+          [(ngModel)]="checkBoxFlag"
+          [ngStyle]="{'text-decoration': (listType=='completed') ? 'line-through' : ''}">
+          {{ letData.name }}
+        </mat-checkbox>
+        <mat-divider></mat-divider>
+      </ul>
+    </span>
+  </section>
+</div>
