@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TaskType } from './TaskType ';
-import {TaskListComponent} from "./task-list/task-list.component";
+import { TaskListComponent } from './task-list/task-list.component';
 
 @Component({
   selector: 'app-tasks',
@@ -9,7 +9,7 @@ import {TaskListComponent} from "./task-list/task-list.component";
 })
 export class TasksComponent implements OnInit {
   @ViewChild('pendingList', { static: false }) pendingList!: TaskListComponent;
-  @ViewChild('completeList', { static: false }) completeList!: TaskListComponent;
+  @ViewChild('completeList', { static: false })completeList!: TaskListComponent;
   taskName: TaskType[] = [];
   panelOpenState: boolean = true;
   completedData: any;
