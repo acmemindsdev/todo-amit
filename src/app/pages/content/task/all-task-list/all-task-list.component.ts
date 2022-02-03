@@ -1,13 +1,13 @@
+import { TaskType } from './../../../tasks/TaskType ';
 import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
-import {TaskType} from '../TaskType ';
 import {ThemePalette} from "@angular/material/core";
 
 @Component({
-  selector: 'app-task-list',
-  templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.scss']
+  selector: 'app-all-task-list',
+  templateUrl: './all-task-list.component.html',
+  styleUrls: ['./all-task-list.component.scss']
 })
-export class TaskListComponent implements OnInit {
+export class AllTaskListComponent implements OnInit {
   @Input() listData: TaskType[] = [];
   @Input() listType: any;
   @Output() checkBoxToggle:EventEmitter<any>= new EventEmitter();
