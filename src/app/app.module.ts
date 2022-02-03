@@ -13,7 +13,6 @@ import {MatSliderModule} from '@angular/material/slider'
 import {MatAutocompleteModule} from '@angular/material/autocomplete'
 import { MatDialogModule } from "@angular/material/dialog";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// import {MatFormFieldModule} from '@material/form-field';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
@@ -23,13 +22,24 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {TasksComponent} from './pages/tasks/tasks.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { TaskListComponent } from './pages/tasks/task-list/task-list.component';
+import { HeaderComponent } from './pages/header/header.component';
+import { SidebarComponent } from './pages/sidebar/sidebar.component';
+import { ContentComponent } from './pages/content/content.component';
+import { AddTaskComponent } from './pages/content/add-task/add-task.component';
+import { TaskComponent } from './pages/content/task/task.component';
+import { AllTaskListComponent } from './pages/content/task/all-task-list/all-task-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
     TaskListComponent,
-
+    HeaderComponent,
+    SidebarComponent,
+    ContentComponent,
+    AddTaskComponent,
+    TaskComponent,
+    AllTaskListComponent
   ],
   imports: [
     BrowserModule,
@@ -51,11 +61,13 @@ import { TaskListComponent } from './pages/tasks/task-list/task-list.component';
     MatListModule,
     MatExpansionModule,
     MatCheckboxModule,
+
   ],
   exports:[
     MatGridListModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [  ]
 })
 export class AppModule { }

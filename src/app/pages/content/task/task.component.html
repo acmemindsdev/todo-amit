@@ -1,0 +1,18 @@
+<div class="sideMargin">
+  <mat-grid-list cols="1" rowHeight="45px" gutterSize="1px">
+    <!-- <div class="header">
+      <div class="titleHeader">Tasks <button class="dotBtn">...</button></div>
+    </div>
+    <div class="addTaskSection">
+      <button class="plusIcon">+</button> Add a task
+    </div> -->
+    <app-add-task></app-add-task>
+    <app-task-list #pendingList [listData]="taskName" listType="pending" (checkBoxToggle)="updateTasks($event, 'pending')"></app-task-list>
+    <mat-expansion-panel hideToggle [expanded]=panelOpenState >
+      <mat-expansion-panel-header>
+        <mat-panel-title > Completed </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-task-list #completeList [listData]="taskName" listType="completed" (checkBoxToggle)="updateTasks($event, 'completed')"></app-task-list>
+    </mat-expansion-panel>
+  </mat-grid-list>
+</div>

@@ -1,22 +1,23 @@
+import { AllTaskListComponent } from './all-task-list/all-task-list.component';
+import { TaskType } from './../../tasks/TaskType ';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TaskType } from './TaskType ';
-import { TaskListComponent } from './task-list/task-list.component';
+
+
 
 @Component({
-  selector: 'app-tasks',
-  templateUrl: './tasks.component.html',
-  styleUrls: ['./tasks.component.scss'],
-
+  selector: 'app-task',
+  templateUrl: './task.component.html',
+  styleUrls: ['./task.component.scss']
 })
-export class TasksComponent implements OnInit {
-  @ViewChild('pendingList', { static: false }) pendingList!: TaskListComponent;
-  @ViewChild('completeList', { static: false })completeList!: TaskListComponent;
+export class TaskComponent implements OnInit {
+  @ViewChild('pendingList', { static: false }) pendingList!: AllTaskListComponent;
+  @ViewChild('completeList', { static: false })completeList!: AllTaskListComponent;
   taskName: TaskType[] = [];
   panelOpenState: boolean = true;
   completedData: any;
   checkBoxFlag: boolean = true;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     let sampleData = [
