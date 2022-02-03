@@ -1,31 +1,35 @@
+$addTaskBackgrouncolor: rgb(255, 255, 255);
+$topBackgrouncolor: #0078D7;
+$plusBackgrouncolor: rgba(255, 255, 255, 0.301);
+
 mat-grid-tile {
   background: lightblue;
 }
 .header{
-  background-color:rgb(255, 255, 255);
+  background-color:addTaskBackgrouncolor;
   height: 50px;
   width: 100%;
 }
 .titleHeader{
    font-size:20px;
    font-weight: 700;
-   color:#0078D7;
+   color: topBackgrouncolor;
    height: 50px;
    margin: 8px;
    padding: 10px;
 }
 .todoHeader{
- background-color:#0078D7 ;
+ background-color: topBackgrouncolor ;
 }
 .plusIcon{
   border: 0;
-  background-color:  rgba(255, 255, 255, 0.301);
+  background-color: plusBackgrouncolor;
   color: #0078D7;
   border-width : 0;
   font-size: medium;
 }
 .addTaskSection{
-  background-color: rgba(192, 188, 188, 0.301);
+  background-color: plusBackgrouncolor;
  padding: 10px;
  color: #3b77d9;
  font-size:smaller;
@@ -38,11 +42,11 @@ mat-grid-tile {
   background-color:rgb(255, 255, 255);
 }
 .top-background{
-  background-color: #0078D7;
+  background-color: topBackgrouncolor;
 }
 .btn-style{
   border: 0;
-  background-color: #0078D7;
+  background-color: topBackgrouncolor;
   color: aliceblue;
   font-size: 25px;
 }
@@ -51,7 +55,7 @@ mat-grid-tile {
 }
 
 .bg-light .bg-variant {
-  background-color: #0078D7;
+  background-color: topBackgrouncolor;
 }
 .set-search-position{
   margin: 10px;

@@ -2,8 +2,6 @@ import { AllTaskListComponent } from './all-task-list/all-task-list.component';
 import { TaskType } from './../../tasks/TaskType ';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',

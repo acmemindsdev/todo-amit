@@ -21,7 +21,6 @@ import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {TasksComponent} from './pages/tasks/tasks.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { TaskListComponent } from './pages/tasks/task-list/task-list.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import { ContentComponent } from './pages/content/content.component';
@@ -33,7 +32,6 @@ import { AllTaskListComponent } from './pages/content/task/all-task-list/all-tas
   declarations: [
     AppComponent,
     TasksComponent,
-    TaskListComponent,
     HeaderComponent,
     SidebarComponent,
     ContentComponent,
