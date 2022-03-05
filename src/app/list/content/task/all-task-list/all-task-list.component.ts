@@ -1,4 +1,4 @@
-import { TaskType } from './../../../tasks/TaskType ';
+import { TaskType } from '../../../tasks/TaskType ';
 import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
 import {ThemePalette} from "@angular/material/core";
 
