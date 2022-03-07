@@ -22,7 +22,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { ContentComponent } from './content/content.component';
 import { TaskComponent } from './content/task/task.component';
 import { AllTaskListComponent } from './content/task/all-task-list/all-task-list.component';
 import { AddTaskComponent } from './content/add-task/add-task.component';
@@ -33,7 +32,6 @@ import { AddTaskComponent } from './content/add-task/add-task.component';
     ListComponent,
     HeaderComponent,
     SidebarComponent,
-    ContentComponent,
     TaskComponent,
     AllTaskListComponent,
     AddTaskComponent
