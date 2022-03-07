@@ -1,4 +1,13 @@
 <div>
   <app-header></app-header>
-  <app-sidebar></app-sidebar>
+    <div>
+      <mat-sidenav-container>
+        <mat-sidenav-content>
+          <app-sidebar></app-sidebar>
+          <div class="content">
+            <router-outlet></router-outlet>
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
 </div>
