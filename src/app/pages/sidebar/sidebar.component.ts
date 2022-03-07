@@ -6,15 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  navFlag: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  closeSideNav() {
-  this.navFlag = false;
   }
 
 }
