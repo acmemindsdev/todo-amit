@@ -5,26 +5,25 @@
         <mat-icon (click)="closeSideNav()">menu</mat-icon>
       </button>
         <br><br>
-      <button mat-button class="menu-button" >
+      <button mat-button class="menu-button">
         <mat-icon>star</mat-icon>
         <span> Important</span>
       </button>
       <mat-divider></mat-divider>
-      <button mat-button class="menu-button" >
+      <button mat-button class="menu-button">
         <mat-icon class="icon-color-style">home</mat-icon>
         <span> Tasks</span>
       </button>
       <mat-divider></mat-divider>
       <br>
-      <button mat-button class="menu-button">
+      <button mat-button class="menu-button" [routerLink]="['/list/testlist1']">
         <mat-icon class="icon-color-style" >menu</mat-icon>
-        <span routerLink="/task"> Test List 1</span>
-        <!-- <a routerLink="/testlistfirst">router link</a> -->
+        <span > Test List 1</span>
       </button>
       <mat-divider></mat-divider>
-      <button mat-button class="menu-button" routerLink="/tasks">
+      <button mat-button class="menu-button" [routerLink]="['/list/testlist2']">
         <mat-icon class="icon-color-style" >menu</mat-icon>
-        <span  > Test List 2</span>
+        <span> Test List 2</span>
       </button>
       <mat-divider></mat-divider>
       <div class="addTaskSection"><button class="plusIcon">+</button> New list</div>

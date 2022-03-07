@@ -4,7 +4,6 @@ import { ListRoutingModule } from './list-routing.module';
 import { ListComponent } from './list.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { SharedModule } from '../shared/shared.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -41,7 +40,6 @@ import { AddTaskComponent } from './content/add-task/add-task.component';
   ],
   imports: [
     CommonModule,
-    SharedModule,
     ListRoutingModule,
     MatButtonModule,
     MatFormFieldModule,

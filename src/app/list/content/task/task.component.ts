@@ -1,5 +1,5 @@
 import { AllTaskListComponent } from './all-task-list/all-task-list.component';
-import { TaskType } from '../../tasks/TaskType ';
+import { TaskType } from '../../interface/TaskType ';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
