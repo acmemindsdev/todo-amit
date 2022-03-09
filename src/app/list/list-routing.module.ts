@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './list.component';
+import { AddTaskComponent } from './content/add-task/add-task.component';
 
 const routes: Routes = [
     {
-      path:'', component: ListComponent, children: [
+      path:'', component: ListComponent,
+      children: [
         {
-          path: ':task', loadChildren: () => import('./content/content.module').then(m => m.ContentModule)
+          path: ':rout', loadChildren: () => import('./content/content.module').then(m => m.ContentModule)
+        },
+        {
+          path:'', component: AddTaskComponent
         }
       ]
     },
