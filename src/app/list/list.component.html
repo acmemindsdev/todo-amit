@@ -1,0 +1,18 @@
+<div class="sideColor">
+  <app-header></app-header>
+    <button mat-button (click)="sideNaveController()">
+       <mat-icon>menu</mat-icon>
+    </button>
+    <div>
+      <mat-sidenav-container>
+          <mat-sidenav mode="side" [opened]="openSidenav">
+            <app-sidebar></app-sidebar>
+          </mat-sidenav>
+          <mat-sidenav-content>
+          <div class="content">
+            <router-outlet></router-outlet>
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+</div>
