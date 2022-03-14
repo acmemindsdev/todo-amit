@@ -8,7 +8,7 @@ const routes: Routes = [
       path:'', component: ListComponent,
       children: [
         {
-          path: ':rout', loadChildren: () => import('./content/content.module').then(m => m.ContentModule)
+          path: ':rout', loadChildren: () => import('./content/content.module').then(m => m.ContentModule),
         },
         {
           path:'', component: AddTaskComponent
