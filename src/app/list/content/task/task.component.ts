@@ -1,7 +1,7 @@
 import { AllTaskListComponent } from './all-task-list/all-task-list.component';
 import { TaskType } from '../../interface/TaskType ';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, ChildActivationEnd, Data, NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-task',
@@ -17,40 +17,36 @@ export class TaskComponent implements OnInit {
   checkBoxFlag: boolean = true;
 
   constructor(private router: Router) {
-      // console.log(router)
       this.router.events.subscribe((val) => {
-        // console.log("here" +location.pathname);
-        this.url = location.pathname;
-
+        this.routUrl = location.pathname;
       })
-
   }
 
   ngOnInit(): void {
-    console.log("ngOnInit" , this.url)
-    if(this.url === "/list/tasklist1") {
-      this.taskList = [
-        'call someone',
-        'buy something',
-        'meet someone',
-        'study something',
-      ];
+
+    if(this.routUrl === "/list/tasklist1") {
+      this.listData = [
+        'Go on side',
+        'Work something',
+        'Create new',
+        'Study hard'
+       ];
     }
-    if(this.url === "/list/tasklist2") {
-      this.taskList = [
+    if(this.routUrl === "/list/tasklist2") {
+      this.listData = [
         'First Task',
         'Second Task',
         'Third Task',
-        'Four Task',
-      ];
+        'Four Task'
+       ];
     }
-    this.taskName = this.taskList.map((data, index) => {
+    this.taskName = this.listData.map((data, index) => {
       return { id: index, name: data, completed: false };
     });
   }
   receivedFromRout: any;
-  url: any;
-  taskList  = [''];
+  routUrl: any;
+  listData  = [''];
 
   updateTasks(item: TaskType, type: string) {
     item.completed = type === 'pending';
