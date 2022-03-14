@@ -58,3 +58,4 @@ export class TaskComponent implements OnInit {
     this.pendingList.updateFilterData();
   }
 }
+
