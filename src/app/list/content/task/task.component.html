@@ -1,12 +1,22 @@
 <div class="sideMargin">
   <mat-grid-list cols="1" rowHeight="45px" gutterSize="1px">
     <app-add-task></app-add-task>
-    <app-all-task-list #pendingList [listData]="taskName" listType="pending" (checkBoxToggle)="updateTasks($event, 'pending')"></app-all-task-list>
-    <mat-expansion-panel hideToggle [expanded]=panelOpenState >
+    <app-all-task-list
+      #pendingList
+      [listData]="taskName"
+      listType="pending"
+      (checkBoxToggle)="updateTasks($event, 'pending')"
+    ></app-all-task-list>
+    <mat-expansion-panel hideToggle [expanded]="panelOpenState">
       <mat-expansion-panel-header>
-        <mat-panel-title > Completed </mat-panel-title>
+        <mat-panel-title> Completed </mat-panel-title>
       </mat-expansion-panel-header>
-      <app-all-task-list #completeList [listData]="taskName" listType="completed" (checkBoxToggle)="updateTasks($event, 'completed')"></app-all-task-list>
+      <app-all-task-list
+        #completeList
+        [listData]="taskName"
+        listType="completed"
+        (checkBoxToggle)="updateTasks($event, 'completed')"
+      ></app-all-task-list>
     </mat-expansion-panel>
   </mat-grid-list>
 </div>

@@ -1,7 +1,7 @@
 import { AllTaskListComponent } from './all-task-list/all-task-list.component';
 import { TaskType } from '../../interface/TaskType ';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-task',
@@ -40,10 +40,10 @@ export class TaskComponent implements OnInit {
           'Four Task'
          ];
       }
+      this.taskName = this.listData.map((data, index) => {
+        return { id: index, name: data, completed: false };
+      });
     })
-    this.taskName = this.listData.map((data, index) => {
-      return { id: index, name: data, completed: false };
-    });
   }
 
   updateTasks(item: TaskType, type: string) {

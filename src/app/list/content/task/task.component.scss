@@ -1,35 +1,34 @@
-$addTaskBackgrouncolor: rgb(255, 255, 255);
-$topBackgrouncolor: #0078D7;
-$plusBackgrouncolor: rgba(255, 255, 255, 0.301);
+$addTaskBackgroundColor: rgb(255, 255, 255);
+$topBackgroundColor: #0078D7;
+$plusBackgroundColor: rgba(255, 255, 255, 0.301);
 
 mat-grid-tile {
   background: lightblue;
 }
 .header{
-  background-color:addTaskBackgrouncolor;
+  background-color: $addTaskBackgroundColor;
   height: 50px;
   width: 100%;
 }
 .titleHeader{
    font-size:20px;
    font-weight: 700;
-   color: topBackgrouncolor;
+   color: $topBackgroundColor;
    height: 50px;
    margin: 8px;
    padding: 10px;
 }
 .todoHeader{
- background-color: topBackgrouncolor ;
+ background-color: $topBackgroundColor ;
 }
 .plusIcon{
   border: 0;
-  background-color: plusBackgrouncolor;
+  background-color: $plusBackgroundColor;
   color: #0078D7;
-  border-width : 0;
   font-size: medium;
 }
 .addTaskSection{
-  background-color: plusBackgrouncolor;
+  background-color: $plusBackgroundColor;
  padding: 10px;
  color: #3b77d9;
  font-size:smaller;
@@ -42,20 +41,20 @@ mat-grid-tile {
   background-color:rgb(255, 255, 255);
 }
 .top-background{
-  background-color: topBackgrouncolor;
+  background-color: $topBackgroundColor;
 }
 .btn-style{
   border: 0;
-  background-color: topBackgrouncolor;
+  background-color: $topBackgroundColor;
   color: aliceblue;
   font-size: 25px;
 }
 .mat-grid-list .mat-expansion-panel:not([class*=mat-elevation-z]) {
-   box-shadow: none;
+   box-shadow: 0;
 }
 
 .bg-light .bg-variant {
-  background-color: topBackgrouncolor;
+  background-color: $topBackgroundColor;
 }
 .set-search-position{
   margin: 10px;
