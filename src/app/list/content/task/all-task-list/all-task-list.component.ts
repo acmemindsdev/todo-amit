@@ -1,5 +1,5 @@
 import { TaskType } from 'src/app/list/interface/TaskType ';
-import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
+import { Component, OnInit,Input,Output, EventEmitter, OnChanges } from '@angular/core';
 import {ThemePalette} from "@angular/material/core";
 
 @Component({
@@ -7,7 +7,8 @@ import {ThemePalette} from "@angular/material/core";
   templateUrl: './all-task-list.component.html',
   styleUrls: ['./all-task-list.component.scss']
 })
-export class AllTaskListComponent implements OnInit {
+
+export class AllTaskListComponent implements OnInit, OnChanges {
   @Input() listData: TaskType[] = [];
   @Input() listType: any;
   @Output() checkBoxToggle:EventEmitter<any>= new EventEmitter();
@@ -17,6 +18,10 @@ export class AllTaskListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.updateFilterData();
+  }
+
+  ngOnChanges() {
     this.updateFilterData();
   }
 
