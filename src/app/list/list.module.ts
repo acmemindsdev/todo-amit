@@ -10,12 +10,12 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 
 
-
 @NgModule({
   declarations: [
     ListComponent,
     HeaderComponent,
     SidebarComponent,
+
   ],
   imports: [
     CommonModule,
