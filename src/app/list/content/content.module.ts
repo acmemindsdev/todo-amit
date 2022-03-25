@@ -10,6 +10,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatIconModule } from "@angular/material/icon";
+import { MatInputModule } from "@angular/material/input";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -26,7 +30,10 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     MatGridListModule,
     MatButtonModule,
-
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatCardModule,
   ]
 })
 export class ContentModule { }
