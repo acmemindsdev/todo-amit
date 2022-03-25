@@ -1,4 +1,19 @@
 <div class="header">
   <div class="titleHeader">Tasks <button class="dotBtn">...</button></div>
 </div>
-<div class="addTaskSection"><button class="plusIcon">+</button> Add a task</div>
+<form>
+ <div>
+   <mat-card>
+    <div class="addTask">
+      <form class="example-form">
+         <mat-form-field (click)="onClick()">
+            <mat-label class="addTask">Add a task</mat-label>
+              <input matInput maxlength="200">
+              <button class="bottom-btn"  [disabled]="addButton" [ngStyle]="{'color': (addButton == 0) ? '#7f8280' : '#0078D7'}">Add task</button>
+         </mat-form-field>
+      </form>
+    </div>
+   </mat-card>
+ </div>
+ <br>
+</form>

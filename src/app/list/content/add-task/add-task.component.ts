@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AddTaskComponent {
 
+  addButton: number = 0;
+
   constructor() { }
+
+  onClick() {
+    this.addButton = 1;
+  }
 
 }
