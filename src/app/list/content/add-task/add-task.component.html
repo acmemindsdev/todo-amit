@@ -1,26 +1,36 @@
 <div class="header">
   <div class="titleHeader">Tasks <button class="dotBtn">...</button></div>
 </div>
-<form>
- <div>
-   <mat-card>
-    <div class="addTask">
-      <form class="example-form">
-         <mat-form-field (click)="onClick()" *ngIf="isEditEnable">
-            <mat-label class="addTask" >Add a task</mat-label>
-              <input matInput maxlength="200" id="taskData" name="taskData" #taskData >
-              <button class="bottom-btn" (click)="addTask(taskData.value)" [disabled]="btnController" [ngStyle]="{'color': (addButton == 0) ? 'grey' : '#0078D7'}">Add task</button>
-         </mat-form-field>
-         <div class="design" *ngIf="!isEditEnable">
+<form [formGroup]="addTaskForm">
+  <div>
+    <mat-card>
+      <div class="addTask">
+        <mat-form-field (click)="onClick()" *ngIf="isEditEnable">
+          <mat-label class="addTask">Add a task</mat-label>
+          <input
+            matInput
+            formControlName="taskName"
+            maxlength="200"
+            #taskData
+          />
+          <button
+            class="bottom-btn"
+            (click)="addTask(taskData.value)"
+            [disabled]="btnController"
+            [ngStyle]="{ color: addButton == 0 ? 'grey' : '#0078D7' }"
+          >
+            Add task
+          </button>
+        </mat-form-field>
+        <div class="design" *ngIf="!isEditEnable">
           <div class="addTaskSection" (click)="onEdit()">
             <button class="plusIcon">
               <span class="iconSize">+ Add a task</span>
             </button>
           </div>
         </div>
-      </form>
-    </div>
-   </mat-card>
- </div>
- <br>
+      </div>
+    </mat-card>
+  </div>
+  <br />
 </form>
